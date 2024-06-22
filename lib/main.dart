@@ -1,13 +1,130 @@
+// // import 'package:flutter/material.dart';
+// // import 'package:notesv2/views/HomeView.dart';
+// // import 'package:notesv2/views/notesView.dart';
+// // import 'package:sqflite_common_ffi/sqflite_ffi.dart';
+// // import 'theme.dart';
+
+// // void main(List<String> args) {
+// //   sqfliteFfiInit(); // Initialize sqflite_ffi
+
+// //   // Initialize databaseFactory with sqflite_ffi
+// //   databaseFactoryOrNull = databaseFactoryFfi;
+
+// //   runApp(const NotesApp());
+// // }
+
+// // class NotesApp extends StatefulWidget {
+// //   const NotesApp({super.key});
+
+// //   @override
+// //   _NotesAppState createState() => _NotesAppState();
+// // }
+
+// // class _NotesAppState extends State<NotesApp> {
+// //   ThemeMode themeMode = ThemeMode.system;
+
+// //   void toggleTheme() {
+// //     setState(() {
+// //       themeMode =
+// //           themeMode == ThemeMode.light ? ThemeMode.dark : ThemeMode.light;
+// //     });
+// //   }
+
+// //   @override
+// //   Widget build(BuildContext context) {
+// //     return MaterialApp(
+// //       debugShowCheckedModeBanner: false,
+// // //
+// //       title: 'Notes App',
+// //       theme: lightTheme,
+// //       darkTheme: darkTheme,
+// //       themeMode: themeMode,
+// //       routes: {
+// //         'NotesView': (context) => const NotesView(),
+// //       },
+// //       home: HomeView(toggleTheme: toggleTheme, themeMode: themeMode),
+// //     );
+// //   }
+// // }
+
+// import 'package:flutter/material.dart';
+// import 'package:flutter_localizations/flutter_localizations.dart';
+// import 'generated/l10n.dart';
+// import 'package:notesv2/views/HomeView.dart';
+// import 'package:notesv2/views/notesView.dart';
+// import 'package:sqflite_common_ffi/sqflite_ffi.dart';
+// import 'theme.dart';
+
+// void main(List<String> args) {
+//   sqfliteFfiInit();
+
+//   databaseFactoryOrNull = databaseFactoryFfi;
+
+//   runApp(const NotesApp());
+// }
+
+// class NotesApp extends StatefulWidget {
+//   const NotesApp({super.key});
+
+//   @override
+//   _NotesAppState createState() => _NotesAppState();
+// }
+
+// class _NotesAppState extends State<NotesApp> {
+//   ThemeMode themeMode = ThemeMode.system;
+//   Locale _locale = const Locale('en');
+
+//   void toggleTheme() {
+//     setState(() {
+//       themeMode =
+//           themeMode == ThemeMode.light ? ThemeMode.dark : ThemeMode.light;
+//     });
+//   }
+
+//   void _setLocale(Locale locale) {
+//     setState(() {
+//       _locale = locale;
+//     });
+//   }
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       title: S.of(context).noteAppTitle,
+//       theme: lightTheme,
+//       darkTheme: darkTheme,
+//       themeMode: themeMode,
+//       locale: _locale,
+//       supportedLocales: S.delegate.supportedLocales,
+//       localizationsDelegates: const [
+//         S.delegate,
+//         GlobalMaterialLocalizations.delegate,
+//         GlobalWidgetsLocalizations.delegate,
+//         GlobalCupertinoLocalizations.delegate,
+//       ],
+//       routes: {
+//         'NotesView': (context) => const NotesView(),
+//       },
+//       home: HomeView(
+//           toggleTheme: toggleTheme,
+//           themeMode: themeMode,
+//           setLocale: _setLocale),
+//     );
+//   }
+// }
+
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'generated/l10n.dart';
 import 'package:notesv2/views/HomeView.dart';
 import 'package:notesv2/views/notesView.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 import 'theme.dart';
 
 void main(List<String> args) {
-  sqfliteFfiInit(); // Initialize sqflite_ffi
+  sqfliteFfiInit();
 
-  // Initialize databaseFactory with sqflite_ffi
   databaseFactoryOrNull = databaseFactoryFfi;
 
   runApp(const NotesApp());
@@ -22,6 +139,7 @@ class NotesApp extends StatefulWidget {
 
 class _NotesAppState extends State<NotesApp> {
   ThemeMode themeMode = ThemeMode.system;
+  Locale _locale = const Locale('en');
 
   void toggleTheme() {
     setState(() {
@@ -30,19 +148,35 @@ class _NotesAppState extends State<NotesApp> {
     });
   }
 
+  void _setLocale(Locale locale) {
+    setState(() {
+      _locale = locale;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-//
-      title: 'Notes App',
+      title: 'Notes App', // Use a default title here
       theme: lightTheme,
       darkTheme: darkTheme,
       themeMode: themeMode,
+      locale: _locale,
+      supportedLocales: S.delegate.supportedLocales,
+      localizationsDelegates: const [
+        S.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
       routes: {
         'NotesView': (context) => const NotesView(),
       },
-      home: HomeView(toggleTheme: toggleTheme, themeMode: themeMode),
+      home: HomeView(
+          toggleTheme: toggleTheme,
+          themeMode: themeMode,
+          setLocale: _setLocale),
     );
   }
 }

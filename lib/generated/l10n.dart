@@ -49,6 +49,166 @@ class S {
   static S? maybeOf(BuildContext context) {
     return Localizations.of<S>(context, S);
   }
+
+  /// `Notes App`
+  String get noteAppTitle {
+    return Intl.message(
+      'Notes App',
+      name: 'noteAppTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add Note`
+  String get addNoteTitle {
+    return Intl.message(
+      'Add Note',
+      name: 'addNoteTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Main Title`
+  String get mainTitleLabel {
+    return Intl.message(
+      'Main Title',
+      name: 'mainTitleLabel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Subtitle`
+  String get subtitleLabel {
+    return Intl.message(
+      'Subtitle',
+      name: 'subtitleLabel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Note`
+  String get noteLabel {
+    return Intl.message(
+      'Note',
+      name: 'noteLabel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add Note and Read Data`
+  String get addNoteButton {
+    return Intl.message(
+      'Add Note and Read Data',
+      name: 'addNoteButton',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Edit Note`
+  String get editNoteTitle {
+    return Intl.message(
+      'Edit Note',
+      name: 'editNoteTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save`
+  String get save {
+    return Intl.message(
+      'Save',
+      name: 'save',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Notes`
+  String get notesTitle {
+    return Intl.message(
+      'Notes',
+      name: 'notesTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Note deleted successfully`
+  String get deleteSuccess {
+    return Intl.message(
+      'Note deleted successfully',
+      name: 'deleteSuccess',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Error deleting note`
+  String get deleteError {
+    return Intl.message(
+      'Error deleting note',
+      name: 'deleteError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No data available`
+  String get noDataAvailable {
+    return Intl.message(
+      'No data available',
+      name: 'noDataAvailable',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Settings`
+  String get settings {
+    return Intl.message(
+      'Settings',
+      name: 'settings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change Language`
+  String get changeLanguage {
+    return Intl.message(
+      'Change Language',
+      name: 'changeLanguage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `English`
+  String get english {
+    return Intl.message(
+      'English',
+      name: 'english',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `العربية`
+  String get arabic {
+    return Intl.message(
+      'العربية',
+      name: 'arabic',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
@@ -57,6 +217,7 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
   List<Locale> get supportedLocales {
     return const <Locale>[
       Locale.fromSubtags(languageCode: 'en'),
+      Locale.fromSubtags(languageCode: 'ar'),
     ];
   }
 

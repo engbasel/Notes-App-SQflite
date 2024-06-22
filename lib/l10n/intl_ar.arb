@@ -1,13 +1,18 @@
 {
-    "noteAppTitle": "تطبيق الملاحظات",
-    "addNoteTitle": "أضف ملاحظة",
-    "mainTitleLabel": "العنوان الرئيسي",
-    "subtitleLabel": "العنوان الفرعي",
-    "noteLabel": "ملاحظة",
-    "addNoteButton": "إضافة ملاحظة وقراءة البيانات",
-    "settings": "الإعدادات",
-    "changeLanguage": "تغيير اللغة",
-    "english": "الإنجليزية",
-    "arabic": "العربية"
-  }
-  
+  "noteAppTitle": "تطبيق الملاحظات",
+  "addNoteTitle": "أضف ملاحظة",
+  "mainTitleLabel": "العنوان الرئيسي",
+  "subtitleLabel": "العنوان الفرعي",
+  "noteLabel": "ملاحظة",
+  "addNoteButton": "إضافة ملاحظة وقراءة البيانات",
+  "editNoteTitle": "تعديل الملاحظة",
+  "save": "حفظ",
+  "notesTitle": "الملاحظات",
+  "deleteSuccess": "تم حذف الملاحظة بنجاح",
+  "deleteError": "خطأ في حذف الملاحظة",
+  "noDataAvailable": "لا توجد بيانات متاحة",
+  "settings": "الإعدادات",
+  "changeLanguage": "تغيير اللغة",
+  "english": "الإنجليزية",
+  "arabic": "العربية"
+}
