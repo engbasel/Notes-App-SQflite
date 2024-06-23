@@ -4,9 +4,9 @@ import 'package:notesv2/generated/l10n.dart';
 import '../constant.dart';
 
 class HomeView extends StatelessWidget {
-  final VoidCallback toggleTheme;
-  final ThemeMode themeMode;
-  final void Function(Locale) setLocale;
+  final VoidCallback? toggleTheme;
+  final ThemeMode? themeMode;
+  final void Function(Locale)? setLocale;
 // --------------------------------------------------------------------------
   final Sqldb sqldb = Sqldb();
   final TextEditingController mainTitleController = TextEditingController();
@@ -15,9 +15,9 @@ class HomeView extends StatelessWidget {
 // --------------------------------------------------------------------------
   HomeView({
     super.key,
-    required this.toggleTheme,
-    required this.themeMode,
-    required this.setLocale,
+    this.toggleTheme,
+    this.themeMode,
+    this.setLocale,
   });
 
   @override

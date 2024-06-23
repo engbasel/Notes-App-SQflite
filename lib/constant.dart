@@ -25,4 +25,6 @@ void InsetrFunctionToAddValus(
     print('Error inserting data: $e');
   }
 }
+
 // -----------------------------------
+int KdurationTime = 5;

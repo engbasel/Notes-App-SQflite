@@ -32,6 +32,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_localization: ^0.2.0
+  flutter_splash_screen: ^3.0.0
   flutter_translation_sheet: ^1.0.32
   intl: ^0.19.0
   intl_utils: ^2.8.7
@@ -57,7 +58,8 @@ flutter:
   generate: true
   assets:
     - lib/l10n/
-    # - images/a_dot_ham.jpeg
+    - assets/
+    # - assets/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
   # For details regarding adding assets from package dependencies, see
