@@ -25,6 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "addNoteButton": MessageLookupByLibrary.simpleMessage("اضف ملاحظاتك"),
         "addNoteTitle": MessageLookupByLibrary.simpleMessage("أضف ملاحظة"),
         "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
+        "notesTitle": MessageLookupByLibrary.simpleMessage("الملاحظات"),
         "changeLanguage": MessageLookupByLibrary.simpleMessage("تغيير اللغة"),
         "english": MessageLookupByLibrary.simpleMessage("الإنجليزية"),
         "mainTitleLabel":
