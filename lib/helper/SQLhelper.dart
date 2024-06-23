@@ -54,7 +54,9 @@ class Sqldb {
     return await mydb.rawQuery(sqlString);
   }
 
-  Future<int> insertData(String sqlString) async {
+  Future<int> insertData(
+    String sqlString,
+  ) async {
     Database? mydb = await db;
     return await mydb.rawInsert(sqlString);
   }
