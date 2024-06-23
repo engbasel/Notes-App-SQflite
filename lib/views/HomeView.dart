@@ -120,7 +120,9 @@ class HomeView extends StatelessWidget {
                 ElevatedButton(
                   child: Text(S.of(context).ViewYourNotes),
                   onPressed: () async {
-                    try {} catch (e) {}
+                    try {
+                      Navigator.pushNamed(context, 'NotesView');
+                    } catch (e) {}
                   },
                 ),
               ],
