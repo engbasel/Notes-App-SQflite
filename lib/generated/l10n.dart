@@ -53,7 +53,7 @@ class S {
   /// `Notes App`
   String get noteAppTitle {
     return Intl.message(
-      'Notes App',
+      'My Notes',
       name: 'noteAppTitle',
       desc: '',
       args: [],

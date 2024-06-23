@@ -37,7 +37,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "mainTitleLabel": MessageLookupByLibrary.simpleMessage("Main Title"),
         "noDataAvailable":
             MessageLookupByLibrary.simpleMessage("No data available"),
-        "noteAppTitle": MessageLookupByLibrary.simpleMessage("Notes App"),
+        "noteAppTitle": MessageLookupByLibrary.simpleMessage("My Notes"),
         "noteLabel": MessageLookupByLibrary.simpleMessage("Note"),
         "notesTitle": MessageLookupByLibrary.simpleMessage("Notes"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),

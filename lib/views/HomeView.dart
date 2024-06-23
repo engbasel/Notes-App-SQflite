@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:notesv2/helper/SQLhelper.dart';
 import 'package:notesv2/generated/l10n.dart';
-
 import '../constant.dart';
 
 class HomeView extends StatelessWidget {

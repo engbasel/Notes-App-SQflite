@@ -30,7 +30,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "english": MessageLookupByLibrary.simpleMessage("الإنجليزية"),
         "mainTitleLabel":
             MessageLookupByLibrary.simpleMessage("العنوان الرئيسي"),
-        "noteAppTitle": MessageLookupByLibrary.simpleMessage("تطبيق الملاحظات"),
+        "noteAppTitle": MessageLookupByLibrary.simpleMessage("ملاحظاتي"),
         "noteLabel": MessageLookupByLibrary.simpleMessage("ملاحظة"),
         "settings": MessageLookupByLibrary.simpleMessage("الإعدادات"),
         "subtitleLabel": MessageLookupByLibrary.simpleMessage("العنوان الفرعي")
