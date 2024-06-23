@@ -26,6 +26,7 @@ class NoteItem extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // --------------------------------------------------------------------------
             Text(
               noteTitle,
               style: const TextStyle(
@@ -34,7 +35,9 @@ class NoteItem extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
+            // --------------------------------------------------------------------------
             const SizedBox(height: 8),
+            // --------------------------------------------------------------------------
             Text(
               subtitle,
               style: const TextStyle(
@@ -42,7 +45,9 @@ class NoteItem extends StatelessWidget {
                 fontSize: 16,
               ),
             ),
+            // --------------------------------------------------------------------------
             const SizedBox(height: 8),
+            // --------------------------------------------------------------------------
             Text(
               content,
               style: const TextStyle(
@@ -50,6 +55,7 @@ class NoteItem extends StatelessWidget {
                 fontSize: 14,
               ),
             ),
+            // --------------------------------------------------------------------------
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -63,6 +69,7 @@ class NoteItem extends StatelessWidget {
                 ),
               ],
             ),
+            // --------------------------------------------------------------------------
           ],
         ),
       ),

@@ -21,11 +21,12 @@ class EditNoteScreen extends StatefulWidget {
   _EditNoteScreenState createState() => _EditNoteScreenState();
 }
 
+// --------------------------------------------------------------------------
 class _EditNoteScreenState extends State<EditNoteScreen> {
   late TextEditingController titleController;
   late TextEditingController subtitleController;
   late TextEditingController contentController;
-
+// --------------------------------------------------------------------------
   @override
   void initState() {
     super.initState();
@@ -34,6 +35,7 @@ class _EditNoteScreenState extends State<EditNoteScreen> {
     contentController = TextEditingController(text: widget.initialContent);
   }
 
+// --------------------------------------------------------------------------
   Future<void> saveNote() async {
     int response = await Sqldb().updateData(
       '''
@@ -55,6 +57,7 @@ class _EditNoteScreenState extends State<EditNoteScreen> {
     }
   }
 
+// --------------------------------------------------------------------------
   @override
   void dispose() {
     titleController.dispose();
@@ -63,9 +66,11 @@ class _EditNoteScreenState extends State<EditNoteScreen> {
     super.dispose();
   }
 
+// --------------------------------------------------------------------------
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // --------------------------------------------------------------------------
       appBar: AppBar(
         title: Text(S.of(context).editNoteTitle),
         actions: [
@@ -75,25 +80,30 @@ class _EditNoteScreenState extends State<EditNoteScreen> {
           ),
         ],
       ),
+      // --------------------------------------------------------------------------
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
+            // --------------------------------------------------------------------------
             TextField(
               controller: titleController,
               decoration:
                   InputDecoration(labelText: S.of(context).mainTitleLabel),
             ),
+            // --------------------------------------------------------------------------
             TextField(
               controller: subtitleController,
               decoration:
                   InputDecoration(labelText: S.of(context).subtitleLabel),
             ),
+            // --------------------------------------------------------------------------
             TextField(
               controller: contentController,
               decoration: InputDecoration(labelText: S.of(context).noteLabel),
               maxLines: 4,
             ),
+            // --------------------------------------------------------------------------
           ],
         ),
       ),

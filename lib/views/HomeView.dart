@@ -7,12 +7,12 @@ class HomeView extends StatelessWidget {
   final VoidCallback toggleTheme;
   final ThemeMode themeMode;
   final void Function(Locale) setLocale;
-
+// --------------------------------------------------------------------------
   final Sqldb sqldb = Sqldb();
   final TextEditingController mainTitleController = TextEditingController();
   final TextEditingController subTitleController = TextEditingController();
   final TextEditingController noteController = TextEditingController();
-
+// --------------------------------------------------------------------------
   HomeView({
     super.key,
     required this.toggleTheme,
@@ -57,6 +57,7 @@ class HomeView extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
+                // --------------------------------------------------------------------------
                 Text(
                   S.of(context).addNoteTitle,
                   style: const TextStyle(
@@ -65,21 +66,27 @@ class HomeView extends StatelessWidget {
                   ),
                   textAlign: TextAlign.center,
                 ),
+                // --------------------------------------------------------------------------
                 const SizedBox(height: 16),
+                // --------------------------------------------------------------------------
                 TextFormField(
                   controller: mainTitleController,
                   decoration: InputDecoration(
                     labelText: S.of(context).mainTitleLabel,
                   ),
                 ),
+                // --------------------------------------------------------------------------
                 const SizedBox(height: 16),
+                // --------------------------------------------------------------------------
                 TextFormField(
                   controller: subTitleController,
                   decoration: InputDecoration(
                     labelText: S.of(context).subtitleLabel,
                   ),
                 ),
+                // --------------------------------------------------------------------------
                 const SizedBox(height: 16),
+                // --------------------------------------------------------------------------
                 TextFormField(
                   controller: noteController,
                   maxLines: 4,
@@ -87,7 +94,9 @@ class HomeView extends StatelessWidget {
                     labelText: S.of(context).noteLabel,
                   ),
                 ),
+                // --------------------------------------------------------------------------
                 const SizedBox(height: 32),
+                // --------------------------------------------------------------------------
                 ElevatedButton(
                   onPressed: () async {
                     try {
@@ -116,7 +125,9 @@ class HomeView extends StatelessWidget {
                   },
                   child: Text(S.of(context).addNoteButton),
                 ),
+                // --------------------------------------------------------------------------
                 const SizedBox(height: 20),
+                // --------------------------------------------------------------------------
                 ElevatedButton(
                   child: Text(S.of(context).ViewYourNotes),
                   onPressed: () async {
@@ -125,6 +136,7 @@ class HomeView extends StatelessWidget {
                     } catch (e) {}
                   },
                 ),
+                // --------------------------------------------------------------------------
               ],
             ),
           ),

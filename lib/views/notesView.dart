@@ -14,13 +14,14 @@ class NotesView extends StatefulWidget {
 
 class _NotesViewState extends State<NotesView> {
   late Future<List<Map<String, dynamic>>> notesFuture;
-
+// --------------------------------------------------------------------------
   @override
   void initState() {
     super.initState();
     notesFuture = Sqldb().readData("SELECT * FROM $TABLE_NAME");
   }
 
+// --------------------------------------------------------------------------
   Future<void> deleteNoteAndRefresh(int id) async {
     int response =
         await Sqldb().deleteData("DELETE FROM $TABLE_NAME WHERE id = $id");
@@ -36,6 +37,7 @@ class _NotesViewState extends State<NotesView> {
     }
   }
 
+// --------------------------------------------------------------------------
   Future<void> navigateToEditNoteScreen(
       int id, String title, String subtitle, String content) async {
     bool? result = await Navigator.push(
@@ -56,6 +58,7 @@ class _NotesViewState extends State<NotesView> {
     }
   }
 
+  // --------------------------------------------------------------------------
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -66,18 +69,23 @@ class _NotesViewState extends State<NotesView> {
         future: notesFuture,
         builder: (context, AsyncSnapshot<List<Map<String, dynamic>>> snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
+            // --------------------------------------------------------------------------
             return const Center(
               child: CircularProgressIndicator(),
             );
+            //  --------------------------------------------------------------------------
           } else if (snapshot.hasError) {
             return Center(
               child: Text('Error: ${snapshot.error}'),
             );
-          } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
+          }
+          // --------------------------------------------------------------------------
+          else if (!snapshot.hasData || snapshot.data!.isEmpty) {
             return Center(
               child: Text(S.of(context).noDataAvailable),
             );
           } else {
+            // --------------------------------------------------------------------------
             return ListView.builder(
               itemCount: snapshot.data!.length,
               itemBuilder: (context, index) {
@@ -85,7 +93,7 @@ class _NotesViewState extends State<NotesView> {
                 String subTitle = snapshot.data![index]['subTitle'] ?? '';
                 String note = snapshot.data![index]['note'] ?? '';
                 int id = snapshot.data![index]['id'];
-
+                // --------------------------------------------------------------------------
                 return NoteItem(
                   onEdit: () =>
                       navigateToEditNoteScreen(id, mainTitle, subTitle, note),
@@ -94,6 +102,7 @@ class _NotesViewState extends State<NotesView> {
                   subtitle: subTitle,
                   content: note,
                 );
+                // --------------------------------------------------------------------------
               },
             );
           }

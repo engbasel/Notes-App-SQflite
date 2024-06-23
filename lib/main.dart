@@ -21,10 +21,11 @@ class NotesApp extends StatefulWidget {
   _NotesAppState createState() => _NotesAppState();
 }
 
+// --------------------------------------------------------------------------
 class _NotesAppState extends State<NotesApp> {
   ThemeMode themeMode = ThemeMode.system;
   Locale _locale = const Locale('en');
-
+// --------------------------------------------------------------------------
   void toggleTheme() {
     setState(() {
       themeMode =
@@ -32,12 +33,14 @@ class _NotesAppState extends State<NotesApp> {
     });
   }
 
+// --------------------------------------------------------------------------
   void _setLocale(Locale locale) {
     setState(() {
       _locale = locale;
     });
   }
 
+// --------------------------------------------------------------------------
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -48,19 +51,26 @@ class _NotesAppState extends State<NotesApp> {
       themeMode: themeMode,
       locale: _locale,
       supportedLocales: S.delegate.supportedLocales,
+
+      // --------------------------- localizations Arabic English -----------------------------------------------
       localizationsDelegates: const [
         S.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
+      // --------------------------------------------------------------------------
+
+      // --------------------------------------------------------------------------
       routes: {
         'NotesView': (context) => const NotesView(),
       },
+      // --------------------------------------------------------------------------
       home: HomeView(
           toggleTheme: toggleTheme,
           themeMode: themeMode,
           setLocale: _setLocale),
     );
+    // --------------------------------------------------------------------------
   }
 }
