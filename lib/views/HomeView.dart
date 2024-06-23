@@ -102,6 +102,11 @@ class HomeView extends StatelessWidget {
                       print('Read response: $response');
 
                       if (response.isNotEmpty) {
+                        // Clear the text fields
+                        mainTitleController.clear();
+                        subTitleController.clear();
+                        noteController.clear();
+
                         Navigator.pushNamed(context, 'NotesView');
                       } else {
                         print('No data available');
