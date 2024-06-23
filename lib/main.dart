@@ -1,3 +1,4 @@
+// --------------------------------------------------------------------------
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:notesv2/views/splash/SplashView.dart';
@@ -6,6 +7,7 @@ import 'package:notesv2/views/notesView.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 import 'theme.dart';
 import 'views/HomeView.dart';
+// --------------------------------------------------------------------------
 
 // --------------------------------------------------------------------------
 void main(List<String> args) {
@@ -13,7 +15,6 @@ void main(List<String> args) {
   databaseFactoryOrNull = databaseFactoryFfi;
   runApp(const NotesApp());
 }
-
 // --------------------------------------------------------------------------
 
 class NotesApp extends StatefulWidget {
@@ -22,8 +23,8 @@ class NotesApp extends StatefulWidget {
   @override
   _NotesAppState createState() => _NotesAppState();
 }
-// --------------------------------------------------------------------------
 
+// --------------------------------------------------------------------------
 class _NotesAppState extends State<NotesApp> {
   ThemeMode themeMode = ThemeMode.system;
   Locale _locale = const Locale('en');

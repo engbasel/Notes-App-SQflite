@@ -26,12 +26,14 @@ class HomeView extends StatelessWidget {
       appBar: AppBar(
         title: Text(S.of(context).noteAppTitle),
         actions: [
+// --------------------------------------------------------------------------
           IconButton(
             icon: Icon(
               themeMode == ThemeMode.light ? Icons.dark_mode : Icons.light_mode,
             ),
             onPressed: toggleTheme,
           ),
+// --------------------------------------------------------------------------
           PopupMenuButton<Locale>(
             onSelected: setLocale,
             itemBuilder: (BuildContext context) {
@@ -47,6 +49,7 @@ class HomeView extends StatelessWidget {
               ];
             },
           ),
+// --------------------------------------------------------------------------
         ],
       ),
       body: Center(
