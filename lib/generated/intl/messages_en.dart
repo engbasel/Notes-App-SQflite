@@ -22,8 +22,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "addNoteButton":
-            MessageLookupByLibrary.simpleMessage("Add Note and Read Data"),
+        "addNoteButton": MessageLookupByLibrary.simpleMessage("Add Your Note"),
         "addNoteTitle": MessageLookupByLibrary.simpleMessage("Add Note"),
         "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
         "changeLanguage":
