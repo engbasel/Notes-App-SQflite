@@ -35,6 +35,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "noteAppTitle": MessageLookupByLibrary.simpleMessage("ملاحظاتي"),
         "noteLabel": MessageLookupByLibrary.simpleMessage("ملاحظة"),
         "settings": MessageLookupByLibrary.simpleMessage("الإعدادات"),
-        "subtitleLabel": MessageLookupByLibrary.simpleMessage("العنوان الفرعي")
+        "subtitleLabel": MessageLookupByLibrary.simpleMessage("العنوان الفرعي"),
+        "noDataAvailable":
+            MessageLookupByLibrary.simpleMessage(" لا يوجد بيانات متاحة ")
       };
 }
