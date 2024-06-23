@@ -110,6 +110,15 @@ class S {
     );
   }
 
+  String get ViewYourNotes {
+    return Intl.message(
+      'View Your Notes',
+      name: 'ViewYourNotes',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Edit Note`
   String get editNoteTitle {
     return Intl.message(

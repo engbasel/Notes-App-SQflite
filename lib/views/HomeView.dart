@@ -116,6 +116,13 @@ class HomeView extends StatelessWidget {
                   },
                   child: Text(S.of(context).addNoteButton),
                 ),
+                const SizedBox(height: 20),
+                ElevatedButton(
+                  child: Text(S.of(context).ViewYourNotes),
+                  onPressed: () async {
+                    try {} catch (e) {}
+                  },
+                ),
               ],
             ),
           ),
