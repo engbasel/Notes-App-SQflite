@@ -28,3 +28,4 @@ void InsetrFunctionToAddValus(
 
 // -----------------------------------
 int KdurationTime = 2;
+// -----------------------------------
