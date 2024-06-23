@@ -82,8 +82,8 @@ class _NotesViewState extends State<NotesView> {
               itemCount: snapshot.data!.length,
               itemBuilder: (context, index) {
                 String mainTitle = snapshot.data![index]['mainTitle'] ?? '';
-                String subTitle = snapshot.data![index]['note'] ?? '';
-                String note = snapshot.data![index]['subTitle'] ?? '';
+                String subTitle = snapshot.data![index]['subTitle'] ?? '';
+                String note = snapshot.data![index]['note'] ?? '';
                 int id = snapshot.data![index]['id'];
 
                 return NoteItem(

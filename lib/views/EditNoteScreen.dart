@@ -35,21 +35,24 @@ class _EditNoteScreenState extends State<EditNoteScreen> {
   }
 
   Future<void> saveNote() async {
-    int response = await Sqldb().updateData('''
-UPDATE $TABLE_NAME SET
-      mainTitle = "${titleController.text}", 
-      subTitle = "${subtitleController.text}", 
-      note = "${contentController.text}" 
+    int response = await Sqldb().updateData(
+      '''
+      UPDATE $TABLE_NAME SET
+      mainTitle = '${titleController.text}', 
+      subTitle = '${subtitleController.text}', 
+      note = '${contentController.text}' 
       WHERE id = ${widget.id}
-      ''', Colors.accents);
-    //   if (response > 0) {
-    //     ScaffoldMessenger.of(context).showSnackBar(
-    //         SnackBar(content: Text(S.of(context).noteUpdatedSuccessfully)));
-    //     Navigator.pop(context, true); // Return true to indicate success
-    //   } else {
-    //     ScaffoldMessenger.of(context)
-    //         .showSnackBar(SnackBar(content: Text(S.of(context).updateError)));
-    //   }
+    ''',
+      Colors.accents,
+    );
+    if (response > 0) {
+      ScaffoldMessenger.of(context)
+          .showSnackBar(const SnackBar(content: Text('basel')));
+      Navigator.pop(context, true); // Return true to indicate success
+    } else {
+      ScaffoldMessenger.of(context)
+          .showSnackBar(const SnackBar(content: Text('Ahemd')));
+    }
   }
 
   @override
