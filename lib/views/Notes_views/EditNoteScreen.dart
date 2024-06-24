@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:notesv2/generated/l10n.dart';
 import '../../helper/SQLhelper.dart';
 import '../../constant.dart';
+import '../../utils/custom_snack_bar.dart';
 
 class EditNoteScreen extends StatefulWidget {
   final int id;
@@ -48,8 +49,10 @@ class _EditNoteScreenState extends State<EditNoteScreen> {
       Colors.accents,
     );
     if (response > 0) {
-      ScaffoldMessenger.of(context)
-          .showSnackBar(const SnackBar(content: Text('basel')));
+      // ScaffoldMessenger.of(context)
+      //     .showSnackBar(const SnackBar(content: Text('basel')));
+
+      showCustomSnackBar(context, S.of(context).editNoteTitle);
       Navigator.pop(context, true); // Return true to indicate success
     } else {
       ScaffoldMessenger.of(context)

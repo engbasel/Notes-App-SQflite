@@ -5,7 +5,7 @@ import 'package:notesv2/views/splash_views/SplashView.dart';
 import 'generated/l10n.dart';
 import 'package:notesv2/views/Notes_views/notesView.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
-import 'theme.dart';
+import 'utils/theme.dart';
 import 'views/Notes_views/HomeView.dart';
 // --------------------------------------------------------------------------
 
