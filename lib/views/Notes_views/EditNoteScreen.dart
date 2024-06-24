@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:notesv2/generated/l10n.dart';
-import '../helper/SQLhelper.dart';
-import '../constant.dart';
+import '../../helper/SQLhelper.dart';
+import '../../constant.dart';
 
 class EditNoteScreen extends StatefulWidget {
   final int id;

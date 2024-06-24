@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:notesv2/views/HomeView.dart';
+import 'package:notesv2/views/Notes_views/HomeView.dart';
 import '../../constant.dart';
 
 class SplashScreenView extends StatefulWidget {

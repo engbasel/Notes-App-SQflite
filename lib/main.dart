@@ -1,12 +1,12 @@
 // --------------------------------------------------------------------------
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:notesv2/views/splash/SplashView.dart';
+import 'package:notesv2/views/splash_views/SplashView.dart';
 import 'generated/l10n.dart';
-import 'package:notesv2/views/notesView.dart';
+import 'package:notesv2/views/Notes_views/notesView.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 import 'theme.dart';
-import 'views/HomeView.dart';
+import 'views/Notes_views/HomeView.dart';
 // --------------------------------------------------------------------------
 
 // --------------------------------------------------------------------------

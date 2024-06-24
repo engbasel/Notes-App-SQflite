@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:notesv2/views/NoteItem.dart';
+import 'package:notesv2/utils/NoteItem.dart';
 import 'EditNoteScreen.dart';
 import 'package:notesv2/generated/l10n.dart';
-import '../constant.dart';
-import '../helper/SQLhelper.dart';
+import '../../constant.dart';
+import '../../helper/SQLhelper.dart';
 
 class NotesView extends StatefulWidget {
   const NotesView({super.key});
