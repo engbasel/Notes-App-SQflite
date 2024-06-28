@@ -6,22 +6,22 @@ final ThemeData lightTheme = ThemeData(
   brightness: Brightness.light,
   scaffoldBackgroundColor: const Color(0xffF6F5F2),
   appBarTheme: const AppBarTheme(
-    backgroundColor: Color(0xffF3D0D7),
+    backgroundColor: Color(0xffFCB07E),
     titleTextStyle: TextStyle(color: Colors.white, fontSize: 20),
   ),
   textTheme: const TextTheme(
-    bodyLarge: TextStyle(color: Colors.black),
-    bodyMedium: TextStyle(color: Colors.black),
+    bodyLarge: TextStyle(color: Color.fromARGB(255, 199, 179, 166)),
+    bodyMedium: TextStyle(color: Color.fromARGB(255, 199, 179, 166)),
   ),
   inputDecorationTheme: const InputDecorationTheme(
     border: OutlineInputBorder(),
     filled: true,
-    fillColor: Colors.white,
+    fillColor: Color(0xffF6F5F2),
   ),
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
       foregroundColor: Colors.white,
-      backgroundColor: const Color(0xffF3D0D7),
+      backgroundColor: const Color(0xffFCB07E),
       padding: const EdgeInsets.symmetric(vertical: 16),
       textStyle: const TextStyle(fontSize: 18),
     ),
@@ -33,9 +33,9 @@ final ThemeData lightTheme = ThemeData(
 final ThemeData darkTheme = ThemeData(
   primarySwatch: Colors.blue,
   brightness: Brightness.dark,
-  scaffoldBackgroundColor: const Color(0xff41668a),
+  scaffoldBackgroundColor: const Color(0xff27304e),
   appBarTheme: const AppBarTheme(
-    backgroundColor: Color(0xff223547),
+    backgroundColor: Color(0xff27304e),
     titleTextStyle: TextStyle(color: Colors.white, fontSize: 20),
   ),
   textTheme: const TextTheme(
@@ -49,8 +49,8 @@ final ThemeData darkTheme = ThemeData(
   ),
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
-      foregroundColor: Colors.white,
-      backgroundColor: const Color(0xff223547),
+      foregroundColor: const Color(0xff9dc0e8),
+      backgroundColor: const Color(0xff363f62),
       padding: const EdgeInsets.symmetric(vertical: 16),
       textStyle: const TextStyle(fontSize: 18),
     ),
