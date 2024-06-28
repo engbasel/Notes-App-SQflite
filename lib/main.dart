@@ -7,8 +7,9 @@ import 'package:notesv2/views/Notes_views/notesView.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 import 'utils/theme.dart';
 import 'views/Notes_views/HomeView.dart';
-// --------------------------------------------------------------------------
 
+// --------------------------------------------------------------------------
+// Notes APP Ended
 // --------------------------------------------------------------------------
 void main(List<String> args) {
   sqfliteFfiInit();
